@@ -32,6 +32,6 @@ class CalendarFragment : Fragment() {
     private fun changedDate(year: Int, month : Int, dayOfMonth : Int) {
         val msg = "Selected date is " + dayOfMonth + "/" + (month + 1) + "/" + year
         Toast.makeText(requireActivity(), msg, Toast.LENGTH_SHORT).show()
-        requireActivity().onBackPressed()
+        router.navigateTo(false, ::EventsListFragment)
     }
 }
